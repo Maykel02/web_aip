@@ -1,26 +1,88 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 // Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import ButtonCotiza from "../components/ButtonCotiza.astro";
+import About from "./about.astro";
+import Products from "./products.astro";
+import Post from "./post.astro";
+import Why from "./why.astro";
+import Footer from "./footer.astro";
+import Whatsapp from "./whatsapp.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Venta de Gorras por Mayor y Menor</title>
+  </head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
+  <body>
+    <header>
+      <div class="container mx-auto">
+        <div class="mx-auto py-10 flex justify-center items-center relative">
+          <img src="/img/logo.png" alt="Logo de la empresa" width="150" />
+          <div class="cta absolute right-0 top-[50%] translate-y-[-50%]">
+            <ButtonCotiza />
+          </div>
+        </div>
+        <div class="flex flex-col-reverse xl:flex-row justify-center items-center gap-10 relative">
+          <div class="2xl:block hidden absolute bottom-0 left-[30%]">
+            <img src="/img/figure_2.png" alt="" width="500">
+          </div>
+          <figure class="xl:w-1/2 w-full pb-20">
+            <img  class="w-full" src="/img/Capa-9.png" alt="" />
+          </figure>
+          <div class="xl:w-1/2 w-full">
+            <h1 class="text-4xl font-bold text-white mb-4">
+              Venta de Gorras por Mayor y Menor
+            </h1>
+            <p class="text-2xl text-white mb-6 text-center">
+              ANSEL IMPORT PERÚ E.I.R.L
+            </p>
+            <h3>Pedidos y Cotizaciones <bR> 939 502 430</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <About/>
+    <Products/>
+    <Post/>
+    <Why/>
+    <Footer/>
+    <Whatsapp
+      tel="+51939502430?text=Necesito Más Información"
+    />
+
+  </body>
 </html>
+
+<style>
+
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+  }
+  h3{
+    text-align: center;
+    color: var(--secondary-color);
+  }
+  header {
+    background:
+      url("/img/bg-fondo.png"),
+      linear-gradient(to bottom, #bdddff, #5c98f2);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left center;
+  }
+  @media screen and (max-width: 768px) 
+  {
+   .cta{
+    display: none;
+   } 
+  }
+</style>

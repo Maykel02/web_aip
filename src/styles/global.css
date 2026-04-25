@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "font--primary";
+    src: url("/fonts/Gravity.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "font--parrafo";
+    src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+}
+
+
+
+:root{
+    --primary-color: #0268f9;
+    --secondary-color: #001f6a;
+    --background: #f8f8f8;
+}
+
+h1, h2 , h3{
+    font-family: font--primary;
+    color: var(--secondary-color) ;
+}
+
+h1{
+    font-size: 4.8rem;;
+}
+
+h2{
+    font-size: 3.8rem;;
+    color: var(--primary-color);
+    
+}
+
+h3{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+p{
+    font-size: 1.25rem;
+    font-family: font--parrafo;
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 3.2rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    
+}
+
